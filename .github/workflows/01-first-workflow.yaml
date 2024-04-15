@@ -1,22 +1,22 @@
 name: trabajo 01 - First WorkFlow
-on:  
+on:
   push:
   workflow_dispatch:
 
-jobs: 
+jobs:
   echo-hello:
     runs-on: ubuntu-latest
     steps:
       - name: Saludar
-      run : echo "¡Hola, mundo!"
+        run: echo "¡Hola, mundo!"
 
   echo-goodbye:
     runs-on: ubuntu-latest
     steps:
       - name: Paso fallido
-      run: | 
-        echo "Fallo"
-        exit 1
+        run: |
+          echo "Fallo"
+          exit 1
 
       - name: Decir adiós
-      run: echo "¡Adiós!"
+        run: echo "¡Adiós!"
