@@ -1,0 +1,18 @@
+name: 02 - Eventos
+on:
+  push:
+  pull_request:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '00 17 * * *'
+  workflow_dispatch:
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ShowTrigger
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+    
+    
