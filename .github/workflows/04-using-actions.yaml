@@ -1,0 +1,20 @@
+name: 04 - Uso de Actions
+on:
+    push:
+        
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Node Setup
+        uses: actions/setup-node@v4
+      - name: Install Dependencies
+        run: |
+          cd 04-using-actions/react-app
+          npm ci
+      - name: Run Unit Tests
+        run: |
+          cd 04-using-actions/react-app
+          npm run test
