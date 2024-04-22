@@ -1,4 +1,4 @@
-name: trabajo 01 - First WorkFlow
+name: 01 - First WorkFlow
 on:
   #push:
   workflow_dispatch:
