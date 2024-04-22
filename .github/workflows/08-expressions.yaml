@@ -1,7 +1,7 @@
 name: 08 - Expressions
 run-name: "08 - Expressions | DEBUG - ${{ inputs.debug == true && 'ON' || 'OFF' }}"
 on:
-  push:
+  #push:
   workflow_dispatch:
     inputs:
       debug:
@@ -27,4 +27,4 @@ jobs:
         run: echo "I was triggered from main"
 
       - name: Greeting
-        run: "Hola Mundo"
+        run: echo "Hola Mundo"
