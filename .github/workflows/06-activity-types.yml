@@ -1,0 +1,7 @@
+name: 06 - Activity Typesç
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
