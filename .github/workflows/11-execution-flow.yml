@@ -15,7 +15,7 @@ jobs:
     continue-on-error: true
     steps:
         - name: Running unit tests
-          run: "Running tests..."
+          run: echo "Running tests..."
         - name: Failing tests
           if: ${{ inputs.pass-unit-tests }} == false
           run: exit 1
@@ -25,14 +25,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: Deploying to nonprod
-          run: "Deploying to nonprod..."
+          run: echo "Deploying to nonprod..."
 
   e2e-tests:
     needs: deploy-nonprod
     runs-on: ubuntu-latest
     steps:
         - name: Running E2E tests
-          run: "Running E2E tests"
+          run: echo "Running E2E tests"
   
   load-tests:
     needs: deploy-nonprod
