@@ -2,6 +2,11 @@ name: 11 - Controlling the Execution Flow
 
 on:
   workflow_dispatch: 
+    inputs:
+        pass-unit-tests:
+          description: 'Whether to pass unit tests'
+          type: boolean
+          default: false
 
 jobs:
   lint-build:
