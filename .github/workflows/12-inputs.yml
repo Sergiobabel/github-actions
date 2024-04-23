@@ -27,7 +27,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    #Además debería establecer la opción environment en el valor del input target
+    # Además debería establecer la opción environment en el valor del input target
     if: ${{ inputs.dry-run == false }}
     steps:
         - name: Deploy
