@@ -12,10 +12,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      build-status: ${{ steps.build.outcome.build-status }}
+      build-status: ${{ steps.build.outcome.status }}
     steps:
         - name: Print GITHUB_OUTPUT path
-          run: echo "$GITHUB_OUTPUT"
+          run: echo "$GITHUB_OUTPUT.path"
         - name: Build
           id: build
           run: echo "status=${{ inputs.build-status}}" >> "$GITHUB_OUTPUT"
