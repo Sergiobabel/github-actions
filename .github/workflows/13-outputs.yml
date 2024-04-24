@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-        build-status: ${{ steps.build.outputs.status }}
+      build-status: ${{ steps.build.outcome.build-status }}
     steps:
         - name: Print GITHUB_OUTPUT path
           run: echo "${{ env.GITHUB_OUTPUT }}"
@@ -22,8 +22,7 @@ jobs:
 
   deploy: 
     needs: build
-    if: ${{ needs.build.result == 'success' }}  
-    #si la salida build-status del trabajo build es igual a success 
+    if: ${{ needs.build.outputs.status == 'success' }}  
     runs-on: ubuntu-latest
     steps:
         - name: Deploy
